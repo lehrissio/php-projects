@@ -32,11 +32,13 @@
 </form>
 
 <?php
-    // best practice for segurity
+    // best practice for security
     
     if (!empty($_GET['page'])) {
         $page = $_GET['page'];
-        if (!empty($pages[$page])) echo file_get_contents("pages/{$_GET['page']}.html");
+        if (!empty($pages[$page])) {
+            echo file_get_contents("pages/{$_GET['page']}.html");
+        }
     }
     
 ?>
